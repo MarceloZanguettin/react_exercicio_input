@@ -61,6 +61,8 @@ const App = () => {
     estado: '',
   });
 
+  const [response, setResponse] = React.useState(null);
+
   function handleChange({ target }) {
     const { id, value } = target;
     setForm({ ...form, [id]: value });
@@ -74,7 +76,9 @@ const App = () => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(form),
-    }).then((response) => {});
+    }).then((response) => {
+      setResponse(response);
+    });
   }
 
   return (
