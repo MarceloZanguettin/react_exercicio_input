@@ -8,7 +8,7 @@ const formFields = [
   },
   {
     id: 'email',
-    label: 'Eome',
+    label: 'Email',
     type: 'email',
   },
   {
@@ -37,8 +37,12 @@ const App = () => {
 
   return (
     <form>
-      <label htmlFor="nome">Nome</label>
-      <input type="text" id="nome" value={form.nome} onChange={handleChange} />
+      {formFields.map(({ id, label, type }) => (
+        <div>
+          <label htmlFor={id}>{label}</label>
+          <input type={type} id={id} value={form.id} onChange={handleChange} />
+        </div>
+      ))}
     </form>
   );
 };
