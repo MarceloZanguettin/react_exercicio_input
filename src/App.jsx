@@ -55,6 +55,7 @@ const App = () => {
     senha: '',
     cep: '',
     rua: '',
+    numero: '',
     bairro: '',
     cidade: '',
     estado: '',
