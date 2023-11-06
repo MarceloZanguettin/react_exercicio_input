@@ -66,8 +66,12 @@ const App = () => {
     setForm({ ...form, [id]: value });
   }
 
+  function handleSubmit(event) {
+    event.preventDefault();
+  }
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       {formFields.map(({ id, label, type }) => (
         <div key={id}>
           <label htmlFor={id}>{label}</label>
