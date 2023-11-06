@@ -11,6 +11,12 @@ const App = () => {
     cidade: '',
     estado: '',
   });
+
+  function handleChange({ target }) {
+    const { id, value } = target;
+    setForm({ ...form, [id]: value });
+  }
+
   return (
     <form>
       <label htmlFor="nome">Nome</label>
