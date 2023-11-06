@@ -68,7 +68,13 @@ const App = () => {
 
   function handleSubmit(event) {
     event.preventDefault();
-    fetch('https://ranekapt.origamid.dev/json/api/usuario');
+    fetch('https://ranekapt.origamid.dev/json/api/usuario', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(form),
+    }).then((response) => {});
   }
 
   return (
