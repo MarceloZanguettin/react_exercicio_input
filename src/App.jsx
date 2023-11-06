@@ -49,17 +49,14 @@ const formFields = [
 ];
 
 const App = () => {
-  const [form, setForm] = React.useState({
-    nome: '',
-    email: '',
-    senha: '',
-    cep: '',
-    rua: '',
-    numero: '',
-    bairro: '',
-    cidade: '',
-    estado: '',
-  });
+  const [form, setForm] = React.useState(
+    formFields.reduce((acc, field) => {
+      return {
+        ...acc,
+        [field.id]: '',
+      };
+    }, {}),
+  );
 
   const [response, setResponse] = React.useState(null);
 
@@ -70,7 +67,7 @@ const App = () => {
 
   function handleSubmit(event) {
     event.preventDefault();
-    fetch('https://ranekapt.origamid.dev/json/api/usuario', {
+    fetch('https://ranekapi.origamid.dev/json/api/usuario', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
