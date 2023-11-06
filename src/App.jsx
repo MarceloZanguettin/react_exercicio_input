@@ -68,6 +68,7 @@ const App = () => {
 
   function handleSubmit(event) {
     event.preventDefault();
+    fetch('https://ranekapt.origamid.dev/json/api/usuario');
   }
 
   return (
@@ -78,6 +79,7 @@ const App = () => {
           <input type={type} id={id} value={form.id} onChange={handleChange} />
         </div>
       ))}
+      <button>Enviar</button>
     </form>
   );
 };
