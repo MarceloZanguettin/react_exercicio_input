@@ -16,6 +16,36 @@ const formFields = [
     label: 'Senha',
     type: 'password',
   },
+  {
+    id: 'cep',
+    label: 'CEP',
+    type: 'text',
+  },
+  {
+    id: 'rua',
+    label: 'Rua',
+    type: 'text',
+  },
+  {
+    id: 'numero',
+    label: 'Numero',
+    type: 'text',
+  },
+  {
+    id: 'bairro',
+    label: 'Bairro',
+    type: 'text',
+  },
+  {
+    id: 'cidade',
+    label: 'Cidade',
+    type: 'text',
+  },
+  {
+    id: 'estado',
+    label: 'Estado',
+    type: 'text',
+  },
 ];
 
 const App = () => {
